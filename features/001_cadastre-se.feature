@@ -22,7 +22,7 @@ Examples:
 Scenario: Cadastro com campos obrigatórios em branco
     Given que deixo o formulário de cadastro em branco
     When clico em cadastrar
-    Then aparecerá mensagem de erro: "Nomé é obrigatório"
+    Then aparecerá mensagem de erro: "Nome é obrigatório"
     And aparecerá mensagem de erro: "Email é obrigatório"
     And aparecerá mensagem de erro: "Password é obrigatório"
     And o cadastro não é finalizado
