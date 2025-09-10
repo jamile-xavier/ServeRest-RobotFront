@@ -1,13 +1,12 @@
-Feature: Cadastro de usuário
+Feature: Cadastrar Usuário
 
-    Eu, como futuro usuário do ServeRest
-    Gostaria de realizar o cadastro ao site
-    Porque desejo acessar o site
+    Eu, como usuário administrador do ServeRest
+    Gostaria de acessar a página cadastrar usuários
+    Porque desejo cadastrar usuários comuns e administradores para que esses usuários acessem o site
 
-Background: Realizar cadastro
-    Given que estou na página inicial
-    And clico em cadastre-se
-    And preencho o formulário de cadastro
+Background: Usuário admin logado
+    Given que estou logado como usuário admin
+    And me encontro na página Cadastrar Usuários
 
 Scenario Outline: Cadastro de usuário 
     Given que <acaoCheckbox>

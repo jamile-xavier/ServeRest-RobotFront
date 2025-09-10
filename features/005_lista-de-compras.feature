@@ -17,7 +17,7 @@ Scenario: Visualizar lista de compras vazia
     Then deverá aparecer a mensagem "Seu carrinho está vazio"
 
 Scenario: Voltar para página inicial
-     When clico no botão "Home"
+    When clico no botão "Home"
     Then serei redirecionado para a página home
 
 Scenario: Adicionar quantidade do produto
