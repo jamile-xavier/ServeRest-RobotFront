@@ -25,7 +25,7 @@ Scenario Outline: Tentativas de login inválidas
 
 Examples:
     | dados            | mensagem                                   |
-    | campos em branco | "Email é obrigatório"                      |
-    | campos em branco | "Password é obrigatório"                   |
+    | email em branco | "Email é obrigatório"                      |
+    | senha em branco | "Password é obrigatório"                   |
     | e-mail inválido  | "Email deve ser um email válido"           |
     | senha inválida   | "Email e/ou senha inválidos"               |    
