@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../Resources/Resource.robot
 Resource    ../Resources/PO/Home.robot
-Resource    ../Resources/PO/CadastroUsuario.robot
 
 Suite Setup       Abrir o navegador
 Test Setup        Cadastro de usuario

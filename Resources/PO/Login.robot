@@ -35,7 +35,7 @@ And clico no botão "ENTRAR"
     Click Button     ${BTN_ENTRAR}  
 
 Then serei redirecionada para página "Home"
-    Wait Until Element Is Visible    ${TEXTO_HOME} 
+    Wait Until Element Is Visible    ${H1_HOME}  
 
 When que preencho o formulário de login com e-mail em branco 
     Input Text        ${INPUT_EMAIL}      ${EMPTY}

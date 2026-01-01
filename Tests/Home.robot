@@ -1,9 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    String
-# Resource    ../Resource.robot
+
 Resource    ../Resources/PO/Home.robot
-Resource    ../Resources/PO/CadastroUsuario.robot
+
 
 Suite Setup       Abrir o navegador
 Test Setup        Cadastro de usuario
@@ -21,3 +21,11 @@ CT02 - Adicionar produto a lista (usuário não admin)
     Given que estou logado como usuario comum
     When clico em adicionar o produto à lista
     Then o produto deverá ser adicionado à lista redirecionando para a página Lista de Compras
+
+# CT03 - Cadastro de usuário (usuário admin)
+#     Given que estou logado como usuario admin
+#     When clico no botão "Cadastrar"
+#     And preencho o formulário de cadastro com os dados válidos
+#     And seleciono a opção "Cadastrar como administrador"    False
+#     And clico em "Cadastrar"
+#     Then o cadastro é concluído

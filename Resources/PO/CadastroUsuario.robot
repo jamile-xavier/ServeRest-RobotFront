@@ -2,15 +2,13 @@
 Library    SeleniumLibrary
 Library    String
 Library    ../../Library/faker_api.py
-Resource     ../PO/Login.robot
-
 
 *** Variables ***
 ${TEXTO_CADASTRO}                    //h2[normalize-space()='Cadastro']
 ${INPUT_NOME}                        nome
 ${INPUT_EMAIL}                       email
 ${INPUT_SENHA}                       password
-${ADMINISTRADOR}                     administrador
+${ADMINISTRADOR}                     //input[@id='administrador']
 ${BTN_CADASTRAR}                     //button[normalize-space()='Cadastrar']
 ${TEXTO_SUCESSO}                     //div[@class='alert alert-dismissible alert-primary']
 ${TEXTO_NOME_VAZIO}                  //span[normalize-space()='Nome é obrigatório']
@@ -44,9 +42,13 @@ Then o cadastro é concluído
     Wait Until Element Is Visible    ${TEXTO_SUCESSO}
 
 And seleciono a opção "Cadastrar como administrador"
-    [Arguments]    ${selecionar_admin}    
-    IF    ${selecionar_admin} == 'True'
-    Select Checkbox    ${ADMINISTRADOR}  
+    [Arguments]    ${selecionar_admin}
+    ${checked}=    Run Keyword And Return Status    Checkbox Should Be Selected    ${ADMINISTRADOR}
+
+    IF    ${selecionar_admin} and not ${checked}
+        Select Checkbox    ${ADMINISTRADOR}
+    ELSE IF    not ${selecionar_admin} and ${checked}
+        Unselect Checkbox    ${ADMINISTRADOR}
     END
 
 Cadastro de usuario
