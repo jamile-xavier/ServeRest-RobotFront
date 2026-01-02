@@ -1,261 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-01T15:19:11.656876" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-01T22:25:48.758995" rpa="false" schemaversion="5">
 <suite id="s1" name="ServeRest-RobotFront" source="C:\Projetos\Robot\ServeRest-RobotFront">
 <suite id="s1-s1" name="Tests" source="C:\Projetos\Robot\ServeRest-RobotFront\Tests">
-<suite id="s1-s1-s1" name="ListaUsuarios" source="C:\Projetos\Robot\ServeRest-RobotFront\Tests\ListaUsuarios.robot">
+<suite id="s1-s1-s1" name="CadastroProduto" source="C:\Projetos\Robot\ServeRest-RobotFront\Tests\CadastroProduto.robot">
 <kw name="Abrir o navegador" owner="Resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:12.708021" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg time="2026-01-01T22:25:49.659836" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-01-01T15:19:12.707419" elapsed="7.459968"/>
+<status status="PASS" start="2026-01-01T22:25:49.659214" elapsed="7.093738"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:12.705694" elapsed="7.462130"/>
+<status status="PASS" start="2026-01-01T22:25:49.657365" elapsed="7.095963"/>
 </kw>
-<test id="s1-s1-s1-t1" name="CT01 - Listar usuários" line="14">
+<test id="s1-s1-s1-t1" name="CT01 - Cadastro de produto com sucesso" line="72">
 <kw name="Cadastro de usuario admin" owner="CadastroUsuario" type="SETUP">
 <kw name="Given que estou na página inicial" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:20.199003" level="INFO">Opening url 'https://front.serverest.dev/login'</msg>
+<msg time="2026-01-01T22:25:56.775560" level="INFO">Opening url 'https://front.serverest.dev/login'</msg>
 <arg>${LOGIN_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-01-01T15:19:20.198493" elapsed="1.886616"/>
+<status status="PASS" start="2026-01-01T22:25:56.775059" elapsed="1.845766"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOGIN_IMAGE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.085517" elapsed="0.042799"/>
+<status status="PASS" start="2026-01-01T22:25:58.621247" elapsed="0.039781"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:20.197825" elapsed="1.930862"/>
+<status status="PASS" start="2026-01-01T22:25:56.774386" elapsed="1.886992"/>
 </kw>
 <kw name="When clico em &quot;Cadastre-se&quot;" owner="Login">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:22.130622" level="INFO">Clicking link '//a[normalize-space()='Cadastre-se']'.</msg>
+<msg time="2026-01-01T22:25:58.663099" level="INFO">Clicking link '//a[normalize-space()='Cadastre-se']'.</msg>
 <arg>${LINK_CADASTRO}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.130128" elapsed="0.103697"/>
+<status status="PASS" start="2026-01-01T22:25:58.662585" elapsed="0.107598"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:22.129391" elapsed="0.104747"/>
+<status status="PASS" start="2026-01-01T22:25:58.661894" elapsed="0.108592"/>
 </kw>
 <kw name="And preencho o formulário de cadastro com os dados válidos" owner="CadastroUsuario">
 <kw name="Get Name" owner="faker_api">
-<msg time="2026-01-01T15:19:22.235898" level="INFO">${NOME} = Guilherme Cunha</msg>
+<msg time="2026-01-01T22:25:58.772303" level="INFO">${NOME} = João Miguel Cunha</msg>
 <var>${NOME}</var>
-<status status="PASS" start="2026-01-01T15:19:22.235398" elapsed="0.000905"/>
+<status status="PASS" start="2026-01-01T22:25:58.771786" elapsed="0.000927"/>
 </kw>
 <kw name="Get Email" owner="faker_api">
-<msg time="2026-01-01T15:19:22.237217" level="INFO">${EMAIL} = pietro59@example.net</msg>
+<msg time="2026-01-01T22:25:58.773586" level="INFO">${EMAIL} = catarina40@example.org</msg>
 <var>${EMAIL}</var>
-<status status="PASS" start="2026-01-01T15:19:22.236652" elapsed="0.000882"/>
+<status status="PASS" start="2026-01-01T22:25:58.773041" elapsed="0.001654"/>
 </kw>
 <kw name="Get Password" owner="faker_api">
-<msg time="2026-01-01T15:19:22.238423" level="INFO">${PASSWORD} = _#(F5Fxw</msg>
+<msg time="2026-01-01T22:25:58.776040" level="INFO">${PASSWORD} = p!2URr(a</msg>
 <var>${PASSWORD}</var>
-<status status="PASS" start="2026-01-01T15:19:22.237918" elapsed="0.000910"/>
+<status status="PASS" start="2026-01-01T22:25:58.775218" elapsed="0.001090"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2026-01-01T15:19:22.240145" level="INFO">${EMAIL} = pietro59@example.net</msg>
+<msg time="2026-01-01T22:25:58.777885" level="INFO">${EMAIL} = catarina40@example.org</msg>
 <arg>${EMAIL}</arg>
 <arg>${EMAIL}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.239213" elapsed="0.001201"/>
+<status status="PASS" start="2026-01-01T22:25:58.776706" elapsed="0.001490"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2026-01-01T15:19:22.243726" level="INFO">${SENHA} = _#(F5Fxw</msg>
+<msg time="2026-01-01T22:25:58.781319" level="INFO">${SENHA} = p!2URr(a</msg>
 <arg>${SENHA}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.240771" elapsed="0.003619"/>
+<status status="PASS" start="2026-01-01T22:25:58.778595" elapsed="0.003034"/>
 </kw>
 <kw name="And preencho o formulário de cadastro" owner="CadastroUsuario">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${TEXTO_CADASTRO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.246635" elapsed="0.013082"/>
+<status status="PASS" start="2026-01-01T22:25:58.783298" elapsed="0.014969"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:22.261223" level="INFO">Typing text 'Guilherme Cunha' into text field 'nome'.</msg>
+<msg time="2026-01-01T22:25:58.799316" level="INFO">Typing text 'João Miguel Cunha' into text field 'nome'.</msg>
 <arg>${INPUT_NOME}</arg>
 <arg>${nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.260431" elapsed="0.115908"/>
+<status status="PASS" start="2026-01-01T22:25:58.798689" elapsed="0.074749"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:22.377809" level="INFO">Typing text 'pietro59@example.net' into text field 'email'.</msg>
+<msg time="2026-01-01T22:25:58.875193" level="INFO">Typing text 'catarina40@example.org' into text field 'email'.</msg>
 <arg>${INPUT_EMAIL}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.377038" elapsed="0.093026"/>
+<status status="PASS" start="2026-01-01T22:25:58.874250" elapsed="0.058964"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:22.471132" level="INFO">Typing password into text field 'password'.</msg>
-<msg time="2026-01-01T15:19:22.481060" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-01-01T22:25:58.934239" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2026-01-01T22:25:58.942901" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${INPUT_SENHA}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.470487" elapsed="0.034466"/>
+<status status="PASS" start="2026-01-01T22:25:58.933632" elapsed="0.037837"/>
 </kw>
 <arg>${NOME}</arg>
 <arg>${EMAIL}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2026-01-01T15:19:22.245414" elapsed="0.259833"/>
+<status status="PASS" start="2026-01-01T22:25:58.782231" elapsed="0.189573"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:22.234752" elapsed="0.270724"/>
+<status status="PASS" start="2026-01-01T22:25:58.771086" elapsed="0.200949"/>
 </kw>
 <kw name="And seleciono a opção &quot;Cadastrar como administrador&quot;" owner="CadastroUsuario">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:22.508273" level="INFO">Verifying checkbox '//input[@id='administrador']' is selected.</msg>
-<msg time="2026-01-01T15:19:22.605359" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-01-01T15:19:22.605969" level="FAIL">Checkbox '//input[@id='administrador']' should have been selected but was not.</msg>
+<msg time="2026-01-01T22:25:58.975584" level="INFO">Verifying checkbox '//input[@id='administrador']' is selected.</msg>
+<msg time="2026-01-01T22:25:59.074345" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-01T22:25:59.074866" level="FAIL">Checkbox '//input[@id='administrador']' should have been selected but was not.</msg>
 <arg>${ADMINISTRADOR}</arg>
 <doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<status status="FAIL" start="2026-01-01T15:19:22.507770" elapsed="0.108079">Checkbox '//input[@id='administrador']' should have been selected but was not.</status>
+<status status="FAIL" start="2026-01-01T22:25:58.974925" elapsed="0.114012">Checkbox '//input[@id='administrador']' should have been selected but was not.</status>
 </kw>
-<msg time="2026-01-01T15:19:22.616234" level="INFO">${checked} = False</msg>
+<msg time="2026-01-01T22:25:59.089328" level="INFO">${checked} = False</msg>
 <var>${checked}</var>
 <arg>Checkbox Should Be Selected</arg>
 <arg>${ADMINISTRADOR}</arg>
 <doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.506921" elapsed="0.109751"/>
+<status status="PASS" start="2026-01-01T22:25:58.973472" elapsed="0.116102"/>
 </kw>
 <if>
 <branch type="IF" condition="${selecionar_admin} and not ${checked}">
 <kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:22.618207" level="INFO">Selecting checkbox '//input[@id='administrador']'.</msg>
+<msg time="2026-01-01T22:25:59.091740" level="INFO">Selecting checkbox '//input[@id='administrador']'.</msg>
 <arg>${ADMINISTRADOR}</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.617683" elapsed="0.078490"/>
+<status status="PASS" start="2026-01-01T22:25:59.090869" elapsed="0.078365"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:22.617016" elapsed="0.079423"/>
+<status status="PASS" start="2026-01-01T22:25:59.089897" elapsed="0.079589"/>
 </branch>
 <branch type="ELSE IF" condition="not ${selecionar_admin} and ${checked}">
 <kw name="Unselect Checkbox" owner="SeleniumLibrary">
 <arg>${ADMINISTRADOR}</arg>
 <doc>Removes the selection of checkbox identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-01-01T15:19:22.697016" elapsed="0.000222"/>
+<status status="NOT RUN" start="2026-01-01T22:25:59.170026" elapsed="0.000211"/>
 </kw>
-<status status="NOT RUN" start="2026-01-01T15:19:22.696584" elapsed="0.000841"/>
+<status status="NOT RUN" start="2026-01-01T22:25:59.169628" elapsed="0.000784"/>
 </branch>
-<status status="PASS" start="2026-01-01T15:19:22.616954" elapsed="0.080587"/>
+<status status="PASS" start="2026-01-01T22:25:59.089838" elapsed="0.080692"/>
 </if>
 <arg>True</arg>
-<status status="PASS" start="2026-01-01T15:19:22.506137" elapsed="0.191530"/>
+<status status="PASS" start="2026-01-01T22:25:58.972712" elapsed="0.197934"/>
 </kw>
 <kw name="And clico em &quot;Cadastrar&quot;" owner="CadastroUsuario">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:22.699446" level="INFO">Clicking button '//button[normalize-space()='Cadastrar']'.</msg>
+<msg time="2026-01-01T22:25:59.172213" level="INFO">Clicking button '//button[normalize-space()='Cadastrar']'.</msg>
 <arg>${BTN_CADASTRAR}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.698918" elapsed="0.080506"/>
+<status status="PASS" start="2026-01-01T22:25:59.171722" elapsed="0.077757"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:22.698169" elapsed="0.081571"/>
+<status status="PASS" start="2026-01-01T22:25:59.171111" elapsed="0.078670"/>
 </kw>
 <kw name="Then o cadastro é concluído" owner="CadastroUsuario">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${TEXTO_SUCESSO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-01T15:19:22.781164" elapsed="0.628612"/>
+<status status="PASS" start="2026-01-01T22:25:59.250987" elapsed="0.625670"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:22.780407" elapsed="0.629660"/>
+<status status="PASS" start="2026-01-01T22:25:59.250279" elapsed="0.626723"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:20.196896" elapsed="3.213503"/>
+<status status="PASS" start="2026-01-01T22:25:56.773337" elapsed="3.103940"/>
 </kw>
 <kw name="Given que estou logado como usuario admin" owner="Home">
-<kw name="Realizar Login" owner="Login">
 <kw name="Given que estou na página inicial" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:23.415654" level="INFO">Opening url 'https://front.serverest.dev/login'</msg>
+<msg time="2026-01-01T22:25:59.879963" level="INFO">Opening url 'https://front.serverest.dev/login'</msg>
 <arg>${LOGIN_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-01-01T15:19:23.415249" elapsed="0.635203"/>
+<status status="PASS" start="2026-01-01T22:25:59.879594" elapsed="0.634947"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOGIN_IMAGE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-01T15:19:24.050894" elapsed="0.015563"/>
+<status status="PASS" start="2026-01-01T22:26:00.514943" elapsed="0.015615"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:23.414683" elapsed="0.652061"/>
+<status status="PASS" start="2026-01-01T22:25:59.879016" elapsed="0.651833"/>
 </kw>
 <kw name="When que preencho o formulário de login com dados válidos" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:24.068459" level="INFO">Typing text 'pietro59@example.net' into text field 'email'.</msg>
+<msg time="2026-01-01T22:26:00.532563" level="INFO">Typing text 'catarina40@example.org' into text field 'email'.</msg>
 <arg>${INPUT_EMAIL}</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:24.067967" elapsed="0.051221"/>
+<status status="PASS" start="2026-01-01T22:26:00.532065" elapsed="0.052036"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:24.120185" level="INFO">Typing password into text field 'password'.</msg>
-<msg time="2026-01-01T15:19:24.126702" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-01-01T22:26:00.585091" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2026-01-01T22:26:00.593767" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${INPUT_SENHA}</arg>
 <arg>${SENHA}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:24.119597" elapsed="0.029740"/>
+<status status="PASS" start="2026-01-01T22:26:00.584507" elapsed="0.030406"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:24.067280" elapsed="0.082348"/>
+<status status="PASS" start="2026-01-01T22:26:00.531392" elapsed="0.083830"/>
 </kw>
 <kw name="And clico no botão &quot;ENTRAR&quot;" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:24.151352" level="INFO">Clicking button '//button[normalize-space()='Entrar']'.</msg>
+<msg time="2026-01-01T22:26:00.616990" level="INFO">Clicking button '//button[normalize-space()='Entrar']'.</msg>
 <arg>${BTN_ENTRAR}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-01T15:19:24.150894" elapsed="0.083526"/>
+<status status="PASS" start="2026-01-01T22:26:00.616496" elapsed="0.076344"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:24.150126" elapsed="0.084590"/>
+<status status="PASS" start="2026-01-01T22:26:00.615718" elapsed="0.077503"/>
 </kw>
-<kw name="Then serei redirecionada para página &quot;Home&quot;" owner="Login">
+<kw name="Then serei redirecionada para página &quot;Home Admin&quot;" owner="Home">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${H1_HOME}</arg>
+<arg>${HOME_ADMIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-01T15:19:24.235926" elapsed="0.013478"/>
+<status status="PASS" start="2026-01-01T22:26:00.694554" elapsed="0.621718"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:24.235216" elapsed="0.014484"/>
+<status status="PASS" start="2026-01-01T22:26:00.693757" elapsed="0.622818"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:23.413963" elapsed="0.835947"/>
+<status status="PASS" start="2026-01-01T22:25:59.878092" elapsed="1.438692"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:23.413201" elapsed="0.836906"/>
-</kw>
-<kw name="When clico em &quot;Listar Usuários&quot;">
+<kw name="When clico em &quot;Cadastrar Produtos&quot;">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-01T15:19:24.252268" level="INFO">Clicking element '//a[normalize-space()='Listar Usuários']'.</msg>
-<msg time="2026-01-01T15:19:24.675130" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-01-01T15:19:24.675572" level="FAIL">Element with locator '//a[normalize-space()='Listar Usuários']' not found.</msg>
-<arg>${LINK_LISTAR_USUARIOS}</arg>
+<msg time="2026-01-01T22:26:01.318630" level="INFO">Clicking element '//a[normalize-space()='Cadastrar Produtos']'.</msg>
+<arg>${LINK_CADASTRO_PRODUTO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2026-01-01T15:19:24.251733" elapsed="0.436223">Element with locator '//a[normalize-space()='Listar Usuários']' not found.</status>
+<status status="PASS" start="2026-01-01T22:26:01.318182" elapsed="0.077212"/>
 </kw>
-<status status="FAIL" start="2026-01-01T15:19:24.250772" elapsed="0.437689">Element with locator '//a[normalize-space()='Listar Usuários']' not found.</status>
+<status status="PASS" start="2026-01-01T22:26:01.317429" elapsed="0.078257"/>
 </kw>
-<kw name="Then serei redirecionada para página Lista dos usuários">
-<status status="NOT RUN" start="2026-01-01T15:19:24.689324" elapsed="0.000390"/>
+<kw name="And preencho o formulário de cadastro de produtos com dados válidos">
+<kw name="Get Product Name" owner="faker_api">
+<msg time="2026-01-01T22:26:01.397766" level="INFO">${PRODUCT_NAME} = reinvent e-business communities</msg>
+<var>${PRODUCT_NAME}</var>
+<status status="PASS" start="2026-01-01T22:26:01.397354" elapsed="0.000806"/>
 </kw>
-<status status="FAIL" start="2026-01-01T15:19:20.168109" elapsed="4.522191">Element with locator '//a[normalize-space()='Listar Usuários']' not found.</status>
+<kw name="Get Product Price" owner="faker_api">
+<msg time="2026-01-01T22:26:01.398953" level="INFO">${PRODUCT_PRICE} = 15</msg>
+<var>${PRODUCT_PRICE}</var>
+<status status="PASS" start="2026-01-01T22:26:01.398455" elapsed="0.000675"/>
+</kw>
+<kw name="Get Product Description" owner="faker_api">
+<msg time="2026-01-01T22:26:01.400018" level="INFO">${PRODUCT_DESCRIPTION} = O poder de inovar de maneira eficaz</msg>
+<var>${PRODUCT_DESCRIPTION}</var>
+<status status="PASS" start="2026-01-01T22:26:01.399435" elapsed="0.000803"/>
+</kw>
+<kw name="Get Product Quantity" owner="faker_api">
+<msg time="2026-01-01T22:26:01.401276" level="INFO">${PRODUCT_QUANTITY} = 06</msg>
+<var>${PRODUCT_QUANTITY}</var>
+<status status="PASS" start="2026-01-01T22:26:01.400588" elapsed="0.001042"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-01-01T22:26:01.404615" level="INFO">${NOME_PRODUTO} = reinvent e-business communities</msg>
+<arg>${NOME_PRODUTO}</arg>
+<arg>${PRODUCT_NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.401970" elapsed="0.003004"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-01-01T22:26:01.408305" level="INFO">${PRECO_PRODUTO} = 15</msg>
+<arg>${PRECO_PRODUTO}</arg>
+<arg>${PRODUCT_PRICE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.405328" elapsed="0.003499"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-01-01T22:26:01.412697" level="INFO">${DESCRICAO_PRODUTO} = O poder de inovar de maneira eficaz</msg>
+<arg>${DESCRICAO_PRODUTO}</arg>
+<arg>${PRODUCT_DESCRIPTION}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.409413" elapsed="0.003705"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-01-01T22:26:01.416579" level="INFO">${QTDE_PRODUTO} = 06</msg>
+<arg>${QTDE_PRODUTO}</arg>
+<arg>${PRODUCT_QUANTITY}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.413507" elapsed="0.003391"/>
+</kw>
+<kw name="And preencho o formulário de cadastro de produtos">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TEXTO_CADASTRO_PRODUTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.418780" elapsed="0.015416"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T22:26:01.435215" level="INFO">Typing text 'reinvent e-business communities' into text field '//input[@id='nome']'.</msg>
+<arg>${INPUT_NOME_PRODUTO}</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.434611" elapsed="0.070863"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T22:26:01.506521" level="INFO">Typing text '15' into text field '//input[@id='price']'.</msg>
+<arg>${INPUT_PRECO_PRODUTO}</arg>
+<arg>${preco}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.505911" elapsed="0.026244"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T22:26:01.533184" level="INFO">Typing text 'O poder de inovar de maneira eficaz' into text field '//textarea[@id='description']'.</msg>
+<arg>${INPUT_DESCRICAO_PRODUTO}</arg>
+<arg>${descricao}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.532587" elapsed="0.078208"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T22:26:01.611980" level="INFO">Typing text '06' into text field '//input[@id='quantity']'.</msg>
+<arg>${INPUT_QTDE_PRODUTO}</arg>
+<arg>${quantidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.611279" elapsed="0.108689"/>
+</kw>
+<arg>${NOME_PRODUTO}</arg>
+<arg>${PRECO_PRODUTO}</arg>
+<arg>${DESCRICAO_PRODUTO}</arg>
+<arg>${QTDE_PRODUTO}</arg>
+<status status="PASS" start="2026-01-01T22:26:01.417458" elapsed="0.302829"/>
+</kw>
+<status status="PASS" start="2026-01-01T22:26:01.396523" elapsed="0.324135"/>
+</kw>
+<kw name="And clico no botão &quot;Cadastrar&quot;">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-01T22:26:01.723243" level="INFO">Clicking button '//button[normalize-space()='Cadastrar']'.</msg>
+<arg>${BTN_CADASTRAR_PRODUTO}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.722645" elapsed="0.101190"/>
+</kw>
+<status status="PASS" start="2026-01-01T22:26:01.721704" elapsed="0.102440"/>
+</kw>
+<kw name="Then o produto deverá ser cadastrado com sucesso redirecionando para página &quot;Lista de Produtos&quot;">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TEXTO_LISTA_PRODUTOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-01T22:26:01.833069" elapsed="0.418203"/>
+</kw>
+<status status="PASS" start="2026-01-01T22:26:01.832090" elapsed="0.419473"/>
+</kw>
+<status status="PASS" start="2026-01-01T22:25:56.753575" elapsed="5.498615"/>
 </test>
 <kw name="Fechar o navegador" owner="Resource" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-01-01T15:19:24.722789" elapsed="3.462988"/>
+<status status="PASS" start="2026-01-01T22:26:02.259901" elapsed="3.754729"/>
 </kw>
-<status status="PASS" start="2026-01-01T15:19:24.721784" elapsed="3.464321"/>
+<status status="PASS" start="2026-01-01T22:26:02.258587" elapsed="3.756368"/>
 </kw>
-<status status="FAIL" start="2026-01-01T15:19:11.770135" elapsed="16.416143"/>
+<status status="PASS" start="2026-01-01T22:25:48.845892" elapsed="17.169239"/>
 </suite>
-<status status="FAIL" start="2026-01-01T15:19:11.759408" elapsed="16.432302"/>
+<status status="PASS" start="2026-01-01T22:25:48.837779" elapsed="17.184920"/>
 </suite>
-<status status="FAIL" start="2026-01-01T15:19:11.666587" elapsed="16.529407"/>
+<status status="PASS" start="2026-01-01T22:25:48.769156" elapsed="17.262238"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="ServeRest-RobotFront" id="s1" pass="0" fail="1" skip="0">ServeRest-RobotFront</stat>
-<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">ServeRest-RobotFront.Tests</stat>
-<stat name="ListaUsuarios" id="s1-s1-s1" pass="0" fail="1" skip="0">ServeRest-RobotFront.Tests.ListaUsuarios</stat>
+<stat name="ServeRest-RobotFront" id="s1" pass="1" fail="0" skip="0">ServeRest-RobotFront</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">ServeRest-RobotFront.Tests</stat>
+<stat name="CadastroProduto" id="s1-s1-s1" pass="1" fail="0" skip="0">ServeRest-RobotFront.Tests.CadastroProduto</stat>
 </suite>
 </statistics>
 <errors>

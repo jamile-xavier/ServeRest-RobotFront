@@ -1,12 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    String
-Resource    ../Resource.robot
-Resource    ../Resources/PO/ListaCompras.robot
- 
 
 *** Variables ***
-${H1_HOME}                   //h1
+${HOME_USUARIO}              //h1[normalize-space()='Serverest Store']
+${HOME_ADMIN}                //h1[contains(text(),'Bem Vindo')]
 ${INPUT_PESQUISA}            //input[@placeholder='Pesquisar Produtos']
 ${BTN_PESQUISAR}             //button[normalize-space()='Pesquisar']
 ${CARD_PRODUTO}              //div[@class='card col-3']
@@ -35,7 +33,13 @@ Then o produto deverá ser adicionado à lista redirecionando para a página Lis
     Wait Until Element Is Visible    ${CARD_PRODUTO}   
 
 Given que estou logado como usuario admin
-    Realizar Login
+    Given que estou na página inicial
+    When que preencho o formulário de login com dados válidos
+    And clico no botão "ENTRAR"
+    Then serei redirecionada para página "Home Admin"
+
+Then serei redirecionada para página "Home Admin"
+    Wait Until Element Is Visible    ${HOME_ADMIN}  
 
 When clico no botão "Cadastrar"
     Click Button     ${BTN_CADASTRAR_USUARIO} 
