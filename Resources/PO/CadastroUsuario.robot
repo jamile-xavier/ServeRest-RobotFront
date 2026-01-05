@@ -33,7 +33,7 @@ And preencho o formulário de cadastro com os dados válidos
     ${NOME}        Get Name
     ${EMAIL}       Get Email
     ${PASSWORD}    Get Password
-    Set Test Variable    ${NOME}       ${EMAIL}
+    Set Test Variable    ${NOME}       ${NOME}
     Set Test Variable    ${EMAIL}       ${EMAIL}
     Set Test Variable    ${SENHA}    ${PASSWORD}
     And preencho o formulário de cadastro    ${NOME}     ${EMAIL}     ${PASSWORD}
