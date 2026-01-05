@@ -1,6 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    String
+Documentation    Página home
 
 *** Variables ***
 ${HOME_USUARIO}              //h1[normalize-space()='Serverest Store']
@@ -12,7 +11,7 @@ ${BTN_ADD_LISTA}             //div[@class='container-fluid']//div//div[1]//div[1
 ${BTN_CADASTRAR_USUARIO}     //a[@data-testid='cadastrarUsuarios']
 
 *** Keywords ***
-Given que estou logado como usuario comum
+Given que estou logado como usuário comum
     Realizar Login
 
 When clico no campo de Pesquisar produtos e digito o nome do produto "${PRODUTO}" 
@@ -32,7 +31,7 @@ Then o produto deverá ser adicionado à lista redirecionando para a página Lis
     Wait Until Element Is Visible    ${TITULO_LISTA_COMPRAS} 
     Wait Until Element Is Visible    ${CARD_PRODUTO}   
 
-Given que estou logado como usuario admin
+Given que estou logado como usuário admin
     Given que estou na página inicial
     When que preencho o formulário de login com dados válidos
     And clico no botão "ENTRAR"
@@ -42,4 +41,7 @@ Then serei redirecionada para página "Home Admin"
     Wait Until Element Is Visible    ${HOME_ADMIN}  
 
 When clico no botão "Cadastrar"
-    Click Button     ${BTN_CADASTRAR_USUARIO} 
+    Click Element     ${BTN_CADASTRAR_USUARIO} 
+
+Then o cadastro é concluído redirecionando para a página "Listar Usuários"
+    Wait Until Element Is Visible    ${TABELA_LISTA_USUARIOS}  

@@ -1,9 +1,8 @@
 *** Settings ***
-Resource    ../Resources/Resource.robot
-Resource    ../Resources/PO/Home.robot
+Resource    ${EXECDIR}/Resources/Resource.robot
 
 Suite Setup       Abrir o navegador
-Test Setup        Cadastro de usuario
+Test Setup        Cadastro de usuário
 Suite Teardown    Fechar o navegador
 
 *** Test Cases ***

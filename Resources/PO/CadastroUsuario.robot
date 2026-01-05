@@ -1,10 +1,9 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    String
-Library    ../../Library/faker_api.py
+Documentation    Cadastro de Usuário
 
 *** Variables ***
-${TEXTO_CADASTRO}                    //h2[normalize-space()='Cadastro']
+${TEXTO_CADASTRO_INICIAL}             //h2[normalize-space()='Cadastro']
+${TEXTO_CADASTRO_HOME_ADMIN}         //h1[normalize-space()='Cadastro de usuários']
 ${INPUT_NOME}                        nome
 ${INPUT_EMAIL}                       email
 ${INPUT_SENHA}                       password
@@ -20,9 +19,12 @@ ${EMAIL_INVALIDO}                    theodorosampaio@com
 ${TEXTO_EMAIL_INVALIDO}              //span[normalize-space()='Email deve ser um email válido']
 
 *** Keywords ***
+And o título da página de cadastro deve ser exibido corretamente
+    [Arguments]    ${título}
+    Wait Until Element Is Visible    ${título}
+
 And preencho o formulário de cadastro
     [Arguments]    ${nome}    ${email}    ${password}
-    Wait Until Element Is Visible    ${TEXTO_CADASTRO} 
     Input Text    ${INPUT_NOME}      ${nome}   
     Input Text    ${INPUT_EMAIL}     ${email}  
     Input Password    ${INPUT_SENHA}      ${password}
@@ -31,6 +33,7 @@ And preencho o formulário de cadastro com os dados válidos
     ${NOME}        Get Name
     ${EMAIL}       Get Email
     ${PASSWORD}    Get Password
+    Set Test Variable    ${NOME}       ${EMAIL}
     Set Test Variable    ${EMAIL}       ${EMAIL}
     Set Test Variable    ${SENHA}    ${PASSWORD}
     And preencho o formulário de cadastro    ${NOME}     ${EMAIL}     ${PASSWORD}
@@ -51,7 +54,7 @@ And seleciono a opção "Cadastrar como administrador"
         Unselect Checkbox    ${ADMINISTRADOR}
     END
 
-Cadastro de usuario
+Cadastro de usuário
     Given que estou na página inicial
     When clico em "Cadastre-se"
     And preencho o formulário de cadastro com os dados válidos
@@ -59,7 +62,7 @@ Cadastro de usuario
     And clico em "Cadastrar"
     Then o cadastro é concluído
 
-Cadastro de usuario admin
+Cadastro de usuário admin
     Given que estou na página inicial
     When clico em "Cadastre-se"
     And preencho o formulário de cadastro com os dados válidos

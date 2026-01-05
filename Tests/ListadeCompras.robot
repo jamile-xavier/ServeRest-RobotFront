@@ -1,13 +1,8 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    String
-Resource    ../ResourceS/Resource.robot
-Resource    ../Resources/PO/Login.robot
-Resource    ../Resources/PO/Home.robot
-
+Resource    ${EXECDIR}/ResourceS/Resource.robot
  
 Suite Setup       Abrir o navegador
-Test Setup        Cadastro de usuario
+Test Setup        Cadastro de usuário
 Suite Teardown    Fechar o navegador
 
 *** Test Cases ***

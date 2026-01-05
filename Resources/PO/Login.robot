@@ -1,6 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    String
+Documentation    Login
 
 *** Variables ***
 ${LOGIN_URL}                           https://front.serverest.dev/login

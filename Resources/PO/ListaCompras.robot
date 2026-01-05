@@ -1,6 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    String
+Documentation    Lista de compras
 
 *** Variables ***
 ${TITULO_LISTA_COMPRAS}    //h1[normalize-space()='Lista de Compras']
@@ -14,9 +13,6 @@ ${AREA_DO_TEXTO}           //p[@data-testid='shopping-cart-empty-message']
 ${MSG_LISTA_VAZIA}         Seu carrinho está vazio
 
 *** Keywords ***
-Given que estou logado como usuário comum
-    Realizar Login
-
 When adiciono produtos à lista de compras
     When clico em adicionar o produto à lista
     Then o produto deverá ser adicionado à lista redirecionando para a página Lista de Compras 

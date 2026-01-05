@@ -1,7 +1,5 @@
 *** Settings ***
-Resource    ../Resources/Resource.robot
-Resource    ../Resources/PO/CadastroUsuario.robot
-Resource    ../Resources/PO/Home.robot
+Resource    ${EXECDIR}/Resources/Resource.robot
 
 Suite Setup    Abrir o navegador
 Suite Teardown    Fechar o navegador
@@ -11,6 +9,7 @@ Suite Teardown    Fechar o navegador
 CT01 - Cadastro de usuário 
     Given que estou na página inicial
     When clico em "Cadastre-se"
+    And o título da página de cadastro deve ser exibido corretamente    ${TEXTO_CADASTRO_INICIAL}
     And preencho o formulário de cadastro com os dados válidos
     And seleciono a opção "Cadastrar como administrador"    ${False}
     And clico em "Cadastrar"
@@ -19,6 +18,7 @@ CT01 - Cadastro de usuário
 CT02 - Cadastro de usuário administrador
     Given que estou na página inicial
     When clico em "Cadastre-se"
+    And o título da página de cadastro deve ser exibido corretamente    ${TEXTO_CADASTRO_INICIAL}
     And preencho o formulário de cadastro com os dados válidos
     And seleciono a opção "Cadastrar como administrador"    ${True}
     And clico em "Cadastrar"
